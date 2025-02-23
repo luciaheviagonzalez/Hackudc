@@ -1,0 +1,76 @@
+/* ----- SECCIÓN DE FIESTAS ----- */
+.fondo-contacto {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/images/imagen_fiesta.png'); /* Imagen de fondo personalizada */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto parallax */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+/* Contenedor con fondo lila semitransparente */
+.contenido {
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    background-color: rgba(161, 92, 252, 0.8); /* Lila con transparencia */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+/* Títulos en blanco */
+.contenido h1, .contenido h2 {
+    color: #ffffff; /* Blanco */
+    margin-bottom: 15px;
+}
+
+/* Estilos para párrafos */
+.contenido p {
+    font-size: 1.2rem;
+    color: white; /* Texto blanco */
+    margin-bottom: 10px;
+}
+
+/* Imágenes dentro del rectángulo */
+.imagen-fiesta {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 500px; /* Máximo tamaño */
+    height: 300px; /* Altura fija */
+    object-fit: cover; /* Recorta sin deformar */
+    display: block;
+    margin: 10px auto; /* Centra horizontalmente */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ----- RESPONSIVE (Para móviles y pantallas pequeñas) ----- */
+@media (max-width: 768px) {
+    .fondo-contacto {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .contenido {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .contenido h1 {
+        font-size: 2rem;
+    }
+
+    .contenido h2 {
+        font-size: 1.5rem;
+    }
+
+    .imagen-fiesta {
+        height: 250px; /* Reduce la altura en móviles */
+    }
+}

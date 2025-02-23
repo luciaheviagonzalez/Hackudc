@@ -1,0 +1,47 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'es-ES'
+title = 'PASO DE LA FACULTAD DE INFORMÁTICA'
+
+[markup]
+  [markup.highlight]
+    style="catppuccin-mocha"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+
+[params]
+  math=false
+
+[[menus.main]]
+name = 'Inicio'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = '¿Qué somos?'
+pageRef = '/que_somos'
+weight = 20
+
+[[menus.main]]
+name = 'Fiestas'
+pageRef = '/fiestas'
+weight = 30
+
+[[menus.main]]
+name = 'Galería'
+pageRef = '/galeria'
+weight = 40
+
+[[menus.main]]
+name = 'Más información'
+pageRef = '/mas_informacion'
+weight = 50
+
+[[menus.main]]
+name = 'Merchandising'
+pageRef = '/merch'
+weight = 50

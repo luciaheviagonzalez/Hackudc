@@ -1,0 +1,83 @@
+/* ----- SECCIÓN "¿QUÉ ES PASOFIC?" ----- */
+.fondo-contacto {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    background-image: url('/images/imagen_quesomos.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto parallax */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Espaciado extra en pantallas pequeñas */
+}
+
+/* Caja semitransparente para el contenido */
+.contenido {
+    background-color: rgba(161, 92, 252, 0.8); /* Lila con transparencia */
+    color: #ffffff; /* Texto en blanco */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 80%;
+    width: 800px;
+    text-align: justify;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+}
+
+/* ----- ESTILOS PARA LOS TÍTULOS ----- */
+.contenido h1, 
+.contenido h2, 
+.contenido h3 {
+    color: #ffffff; /* Blanco */
+    text-align: center;
+}
+
+/* ----- ESTILOS PARA LOS PÁRRAFOS ----- */
+.contenido p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ffffff; /* Blanco */
+}
+
+/* ----- ESTILOS PARA LA LISTA (CADA LI TIENE SU PROPIO RECTÁNGULO) ----- */
+.contenido ul {
+    padding-left: 0;
+    list-style: none; /* Sin viñetas */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre elementos */
+}
+
+/* Cada elemento de la lista tendrá un rectángulo */
+.contenido li {
+    background-color: rgba(161, 92, 252, 0.6); /* Lila más claro y semitransparente */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff; /* Blanco */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* ----- RESPONSIVE (Para móviles y pantallas pequeñas) ----- */
+@media (max-width: 768px) {
+    .fondo-contacto {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .contenido {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .contenido h1 {
+        font-size: 1.8rem;
+    }
+
+    .contenido p, .contenido li {
+        font-size: 1rem;
+    }
+}

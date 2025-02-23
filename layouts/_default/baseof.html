@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  
+  <link rel="stylesheet" href="{{ "css/baseof.css" | relURL }}">
+
+  {{ if hasPrefix .Page.RelPermalink "/" }}
+  <link rel="stylesheet" href="{{ "css/home.css" | relURL }}">
+  {{ else if hasPrefix .Page.RelPermalink "/que_somos" }}
+  <link rel="stylesheet" href="{{ "css/que_somos.css" | relURL }}">
+  {{ else if hasPrefix .Page.RelPermalink "/fiestas" }}
+  <link rel="stylesheet" href="{{ "css/fiestas.css" | relURL }}">
+  {{ else if hasPrefix .Page.RelPermalink "/galeria" }}
+  <link rel="stylesheet" href="{{ "css/galeria.css" | relURL }}">
+  {{ else if hasPrefix .Page.RelPermalink "/mas_informacion" }}
+  <link rel="stylesheet" href="{{ "css/mas_informacion.css" | relURL }}">
+  {{ else if hasPrefix .Page.RelPermalink "/merch" }}
+  <link rel="stylesheet" href="{{ "css/merch.css" | relURL }}">
+  {{ end }}
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "images/logo_pasofic.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "images/logo_pasofic.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "images/logo_pasofic.png" | relURL }}">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-left">
+        <li><a href="{{ "/" | relURL }}">Inicio</a></li>
+        <li><a href="{{ "que_somos" | relURL }}">¿Qué somos?</a></li>
+        <li><a href="{{ "fiestas" | relURL }}">Fiestas</a></li>
+        <li><a href="{{ "galeria" | relURL }}">Galería</a></li>
+        <li><a href="{{ "mas_informacion" | relURL }}">Más información</a></li>
+        <li><a href="{{ "merch" | relURL }}">Merchandising</a></li>
+      </ul>
+      
+      <div class="nav-right">
+        <a href="https://instagram.com/pasofic_udc" target="_blank">
+            <img src="{{ "images/logo_insta.svg" | relURL }}" alt="Instagram" class="social-icon">
+        </a>
+
+        <a href="https://www.tiktok.com/@pasofic_udc" target="_blank">
+            <img src="{{ "images/logo_tiktok.svg" | relURL }}" alt="TikTok" class="social-icon">
+        </a>
+      </div>
+    </nav>    
+  </header>
+
+  <main>
+    {{ block "main" . }}
+    {{ end }}
+  </main>
+
+  <footer>
+    <div class="footer-content">
+        
+        <!-- Logo de Paso Fic alineado a la izquierda -->
+        <div class="footer-logo-container">
+            <a href="{{ "/" | relURL }}">
+                <img src="{{ "images/logo_pasofic.png" | relURL }}" alt="Paso Fic" class="footer-logo">
+            </a>
+        </div>
+
+        <!-- Texto de derechos centrado -->
+        <div class="footer-text">
+            <p>&copy; {{ now.Year }} By Pasofic 2025</p>
+        </div>
+
+        <!-- Logos de UDC y FIC alineados a la derecha -->
+        <div class="footer-images"> 
+            <a href="https://www.udc.es/">
+                <img src="{{ "images/logo_udc.png" | relURL }}" alt="Universidad" class="footer-img">
+            </a>
+            <a href="https://www.fic.udc.es/">
+                <img src="{{ "images/logo_fic.png" | relURL }}" alt="Facultad de informática" class="footer-img">
+            </a>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>

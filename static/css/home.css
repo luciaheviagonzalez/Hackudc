@@ -1,0 +1,82 @@
+/* ----- SECCIÓN HERO (IMÁGENES ANIMADAS) ----- */
+.hero {
+  height: 88vh;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor de imágenes */
+.image-fade-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Imágenes con ajuste para mantener proporción */
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* Asegura que la imagen cubra el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: fade 25s infinite;
+}
+
+/* Ajuste uniforme de las imágenes */
+.image1 {
+  background-image: url('../images/imagen1.png');
+  animation-delay: 0s;
+}
+
+.image2 {
+  background-image: url('../images/imagen2.png');
+  animation-delay: 5s;
+}
+
+.image3 {
+  background-image: url('../images/imagen3.png');
+  animation-delay: 10s;
+}
+
+.image4 {
+  background-image: url('../images/imagen4.png');
+  animation-delay: 15s;
+}
+
+.image5 {
+  background-image: url('../images/imagen5.png');
+  animation-delay: 20s;
+}
+
+/* ----- ANIMACIÓN FADE ----- */
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  20% { opacity: 1; }
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ----- RESPONSIVE PARA MÓVILES ----- */
+@media (max-width: 768px) {
+  .hero {
+      height: 60vh; /* Reduce la altura */
+  }
+
+  .image {
+      background-size: cover;
+      background-position: center;
+  }
+}

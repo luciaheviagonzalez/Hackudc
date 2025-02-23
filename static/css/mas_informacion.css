@@ -1,0 +1,93 @@
+/* ----- SECCIÓN CONTACTO ----- */
+.fondo-contacto {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../images/fondo_masinfo.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+/* Caja semitransparente en lila */
+.contenido {
+    background-color: rgba(161, 92, 252, 0.8); /* Color lila semitransparente */
+    color: white; /* Texto blanco */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 80%;
+    width: 600px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Títulos */
+.contenido h1 {
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Párrafos */
+.contenido p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Enlaces */
+.contenido a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.contenido a:hover {
+    color: #f8d4ff; /* Color más claro al pasar el mouse */
+}
+
+/* Lista */
+.contenido ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contenido li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Código del número de cuenta */
+.contenido code {
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* ----- RESPONSIVE (Para móviles y pantallas pequeñas) ----- */
+@media (max-width: 768px) {
+    .fondo-contacto {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .contenido {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .contenido h1 {
+        font-size: 2rem;
+    }
+
+    .contenido p, .contenido li {
+        font-size: 1rem;
+    }
+}
